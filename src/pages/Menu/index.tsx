@@ -1,19 +1,24 @@
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import React, { useEffect } from 'react';
+import React from 'react';
+import { ScrollView, StyleSheet, View, Text } from 'react-native';
+import { Button, Gap } from '../../components';
 
 const Menu = ({ navigation }) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Choose Your Gender</Text>
-      <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>FEMALE</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>MALE</Text>
-        </TouchableOpacity>
+    <ScrollView contentContainerStyle={styles.container}>
+      <Text style={styles.headerText}>Moondayz</Text>
+      <View style={styles.contentWrapper}>
+        <Gap height={24} />
+        <Button
+          label="Female"
+          onSubmit={() => navigation.navigate('Female')}
+        />
+        <Gap height={12} />
+        <Button
+          label="Male"
+          onSubmit={() => navigation.navigate('Male')}
+        />
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -21,32 +26,21 @@ export default Menu;
 
 const styles = StyleSheet.create({
   container: {
+    flexGrow: 1,
     backgroundColor: '#BA55D3',
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingVertical: 20,
+    paddingHorizontal: 24,
   },
-  text: {
-    fontSize: 40,
-    fontFamily: 'Poppins-Medium',
-    fontWeight: 'bold', 
-    color: '#000000', 
+  contentWrapper: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 16,
+    padding: 24,
   },
-  buttonContainer: {
-    marginTop: 20,
-  },
-  button: {
-    backgroundColor: '#FFFFFF', 
-    paddingVertical: 10,
-    paddingHorizontal: 50,
-    borderRadius: 5,
-    marginVertical: 10, 
-    alignItems: 'center', 
-  },
-  buttonText: {
-    fontSize: 20,
-    fontWeight: 'bold', 
-    color: '#000000', 
-    fontFamily: 'Poppins-Medium',
+  headerText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#FFFFFF',
+    textAlign: 'center',
+    marginBottom: 20,
   },
 });
