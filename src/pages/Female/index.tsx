@@ -1,3 +1,4 @@
+// import 
 import { StyleSheet, Text, View} from 'react-native';
 import React, { useEffect } from 'react';
 import Cal from '../../assets/icon/Cal.svg';

@@ -5,3 +5,4 @@ import Female from './Female';
 //import Home from './Home';
 
 export {SplashScreen, Menu, Female}; 
+// export
