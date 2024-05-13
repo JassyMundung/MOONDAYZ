@@ -3,12 +3,13 @@ import React, { useEffect } from 'react';
 import SimpButton from '../../assets/icon/SimpButton.svg';
 import ArtButton from '../../assets/icon/ArtButton.svg';
 import CalButton from '../../assets/icon/CalButton.svg';
-import A2 from '../../assets/icon/art2.svg';
-import A3 from '../../assets/icon/art3.svg';
-import A4 from '../../assets/icon/art4.svg';
 import A5 from '../../assets/icon/art5.svg';
 import A6 from '../../assets/icon/art6.svg';
 import A7 from '../../assets/icon/art7.svg';
+import A2 from '../../assets/icon/art2.svg';
+import A3 from '../../assets/icon/art3.svg';
+import A4 from '../../assets/icon/art4.svg';
+
 
 
 const Artt = ({ navigation }) => {
