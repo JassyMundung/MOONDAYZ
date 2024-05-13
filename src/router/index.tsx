@@ -45,4 +45,4 @@ const index = () => {
     </Stack.Navigator>
   );
 };
-export default index;
+export default index; 
